@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@Page.Title - David A. Simpson</title>
+        <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+        <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/jquery-ui-1.10.3.js"></script>
+        <script src="~/Scripts/modernizr-2.6.2.js"></script>
+        <meta name="viewport" content="width=device-width" />
+    </head>
+    <body>
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    
+                </div>
+                <div class="MenuBox">
+                
+                    <nav>
+                        <ul id="menu">
+                            <li><a href="~/">Zombie Road Game</a></li>
+                            <li><a href="~/Books.cshtml" >Books</a></li>
+                            <li><a href="~/">Awards</a></li>
+                            <li><a href="~/" style="font-size:20px;">DAVID A. SIMPSON</a></li>
+                            <li><a href="~/">Appearances</a></li>
+                            <li><a href="~/Media.cshtml">Media</a></li>
+                            <li><a href="~/">About Me</a></li>
+                            <li><a href="~/">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; @DateTime.Now.Year - David A. Simpson</p>
+                </div>
+            </div>
+        </footer>
+        @RenderSection("Scripts", required: false)
+    </body>
+</html>
+
+<style>
+   .MenuBox{
+       text-align:center;
+   }
+
+
+
+</style>
